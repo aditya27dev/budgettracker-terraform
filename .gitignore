@@ -10,6 +10,10 @@
 *.tfvars
 !*.tfvars.example
 
+# Backend settings (state bucket name) are passed at init time, not committed
+backend.hcl
+!backend.hcl.example
+
 # Saved plans embed resolved values
 *.tfplan
 tfplan
