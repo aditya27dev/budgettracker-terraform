@@ -10,7 +10,7 @@ BudgetTracker is a personal finance app running on AWS Lambda, deployed with [SS
 |---|---|
 | Remote state bootstrap (S3, versioned, encrypted, native locking) | ✅ Applied |
 | Lambda monitoring module (errors, throttles, p95 duration → SNS email) | ✅ Built and validated (deploys with `dev`) |
-| AWS Budgets module (zero-spend alert) | 🚧 In progress |
+| AWS Budgets module (zero-spend alert) | ✅ Built and validated (deploys with `dev`) |
 | `dev` environment wiring the modules | 🚧 In progress |
 | GitHub Actions CI/CD with OIDC (no stored AWS keys) | 🚧 In progress |
 
@@ -85,7 +85,7 @@ flowchart LR
 bootstrap/                  One-off: creates the remote state bucket (local state)
 modules/
   lambda-monitoring/        CloudWatch alarms + SNS email alerts for existing Lambdas
-  budgets/                  (in progress) AWS Budgets cost alert
+  budgets/                  AWS Budgets zero-spend cost alert
 environments/
   dev/                      (in progress) Wires modules together, S3 backend
 .github/workflows/          (in progress) PR checks and gated apply via OIDC
