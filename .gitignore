@@ -1,0 +1,27 @@
+# Provider plugins and module cache, recreated by `terraform init`
+.terraform/
+
+# State can contain ARNs, account IDs and sometimes secrets. Never commit it.
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# Real variable values are local only. Commit the *.example files instead.
+*.tfvars
+!*.tfvars.example
+
+# Saved plans embed resolved values
+*.tfplan
+tfplan
+
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+.DS_Store
+
+# Deliberately NOT ignored: .terraform.lock.hcl pins provider versions so
+# local runs and CI use identical provider builds.

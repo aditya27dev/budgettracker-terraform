@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars (git-ignored) and adjust if needed.
+region                            = "eu-west-1"
+bucket_prefix                     = "budgettracker-tfstate"
+noncurrent_version_retention_days = 90
