@@ -1,0 +1,14 @@
+# Copy to terraform.tfvars (git-ignored) and fill in real values.
+# Function names: aws lambda list-functions --query "Functions[?starts_with(FunctionName,'budgettracker-dev')].FunctionName"
+
+lambda_functions = {
+  api           = "budgettracker-dev-ApiFunction-xxxxxxxx"
+  recurring-exp = "budgettracker-dev-RecurringExpenseCronHandlerFunction-xxxxxxxx"
+  fx-refresh    = "budgettracker-dev-FxRateRefreshCronHandlerFunction-xxxxxxxx"
+}
+
+alert_email = "you@example.com"
+
+# Optional overrides
+# duration_threshold_percent = 80
+# monthly_budget_usd         = "1.00"
