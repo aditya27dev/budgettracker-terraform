@@ -5,9 +5,9 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      # Root modules pin the range: any 6.x from 6.69 up, never an unreviewed 7.0.
+      # Root modules pin the range: any 6.x from 6.71 up, never an unreviewed 7.0.
       # The exact build is fixed by .terraform.lock.hcl and bumped via Dependabot PRs.
-      version = "~> 6.69"
+      version = "~> 6.71"
     }
   }
 
